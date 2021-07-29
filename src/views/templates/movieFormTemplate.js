@@ -1,5 +1,5 @@
 import { html } from 'https://unpkg.com/lit-html?module';
-import {ifDefined} from '../../../node_modules/lit-html/directives/if-defined.js';
+import {ifDefined} from 'https://unpkg.com/lit-html/directives/if-defined.js?module';
 
 export const movieFormTemplate = (onSubmit, movie) => html`
 <h3>Add movie</h3>
