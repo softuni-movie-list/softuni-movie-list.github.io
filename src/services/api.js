@@ -1,4 +1,4 @@
-export const baseUrl = 'https://dashboard.heroku.com/';
+export const baseUrl = 'https://dashboard.heroku.com';
 
 export const register = `${baseUrl}/users/register`;
 export const login = `${baseUrl}/users/login`;
