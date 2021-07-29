@@ -1,4 +1,5 @@
-export const baseUrl = 'https://movie-list-softuni.herokuapp.com';
+// export const baseUrl = 'https://movie-list-softuni.herokuapp.com';
+export const baseUrl = 'http://localhost:3030';
 
 export const register = `${baseUrl}/users/register`;
 export const login = `${baseUrl}/users/login`;
