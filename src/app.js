@@ -11,10 +11,12 @@ import { addMoviePage } from './views/addMovie.js';
 import { editMoviePage } from './views/editMovie.js';
 import { deleteMoviePage } from './views/deleteMovie.js';
 import { navigationMiddleware } from './middlewares/navigationMiddleware.js';
+import { querystringMiddleware } from './middlewares/querystringMiddleware.js';
 
 page(authMiddleware);
 page(navigationMiddleware);
 page(renderMiddleware);
+page(querystringMiddleware);
 
 page('/', homePage);
 page('/login', loginPage);

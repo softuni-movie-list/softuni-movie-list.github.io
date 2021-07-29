@@ -25,8 +25,17 @@ const moviesTemplate = (movies) => html`
 `;
 
 export function moviePage(ctx) {
-    movieService.getAll()
+    let moviesPromise = null;
+
+    if (ctx.qs.search) {
+        moviesPromise = movieService.search(ctx.qs.search);
+    } else {
+        moviesPromise = movieService.getAll();
+    }
+
+    moviesPromise
         .then(movies => {
+                console.log(movies);
             ctx.render(moviesTemplate(movies));
         });
 }

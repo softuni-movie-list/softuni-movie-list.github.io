@@ -3,7 +3,7 @@ import * as api from './api.js';
 
 export const getAll = () => request.get(api.movies);
 
-export const search = (text) => request.get(`${api.movies}?where=title%20LIKE%20"${search}"`)
+export const search = (text) => request.get(`${api.movies}?where=title%20LIKE%20"${text}"`)
 
 export const getOne = (id) => request.get(`${api.movies}/${id}`);
 

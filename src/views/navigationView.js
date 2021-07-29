@@ -57,7 +57,12 @@ export function renderNavigation(ctx) {
 
         let formData = new FormData(e.currentTarget);
 
-        ctx.page.redirect(`/movies?search=${formData.get('search-text')}`);
+        let serachText = formData.get('search-text').trim();
+        let searchTextEncoded = encodeURIComponent(serachText);
+
+        if (serachText) {
+            ctx.page.redirect(`/movies?search=${searchTextEncoded}`);
+        }
     }
 
     return navigationTemplate(ctx.isAuthenticated, ctx.email, onLogout, onSearch);
